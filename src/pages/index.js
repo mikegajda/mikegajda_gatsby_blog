@@ -13,8 +13,8 @@ class Home extends Component {
 
     return (
       <Layout>
-        <div css={{ marginBottom: rhythm(1) }}>
-          <h1>Pages</h1>
+        {/* <div css={{ marginBottom: rhythm(1) }}> */}
+          {/* <h1>Pages</h1>
           {data.allWordpressPage.edges.map(({ node }) => (
             <div key={node.slug}>
               <Link to={node.slug} css={{ textDecoration: `none` }}>
@@ -32,8 +32,7 @@ class Home extends Component {
             </div>
           ))}
         </div>
-        <hr />
-        <h1>Posts</h1>
+        <hr /> */}
         {data.allWordpressPost.edges.map(({ node }) => (
           <div css={{ marginBottom: rhythm(2) }} key={node.slug}>
             <Link to={node.slug} css={{ textDecoration: `none` }}>
@@ -64,7 +63,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allWordpressPost(sort: { fields: [date] }) {
+    allWordpressPost(sort: { fields: [date], order: DESC }) {
       edges {
         node {
           title

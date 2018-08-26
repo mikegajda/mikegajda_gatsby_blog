@@ -37,7 +37,7 @@ module.exports = {
         },
         // If useACF is true, then the source plugin will try to import the Wordpress ACF Plugin contents.
         // This feature is untested for sites hosted on Wordpress.com
-        useACF: true,
+        useACF: false,
       },
     },
     `gatsby-transformer-sharp`,

@@ -5,7 +5,8 @@ import { Link } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
 
 const containerStyle = {
-  maxWidth: 700,
+  maxWidth: 1100,
+  width: `100%`,
   margin: `0 auto`,
   padding: rhythm(3 / 4),
 }

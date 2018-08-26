@@ -1,19 +1,31 @@
 import Typography from "typography"
-import wordpress2013 from "typography-theme-wordpress-2013"
+import bootstrapTheme from "typography-theme-bootstrap";
 
-wordpress2013.headerLineHeight = 1.1
-wordpress2013.overrideThemeStyles = () => {
+
+// import wordpress2013 from "typography-theme-wordpress-2013"
+
+// wordpress2013.headerLineHeight = 1.1
+// wordpress2013.overrideThemeStyles = () => {
+//   return {
+//     a: {
+//       color: `rgb(60,99,243)`,
+//     },
+//     h1: {
+//       lineHeight: 1,
+//     },
+//   }
+// }
+
+bootstrapTheme.overrideThemeStyles = () => {
   return {
-    a: {
-      color: `rgb(60,99,243)`,
-    },
-    h1: {
-      lineHeight: 1,
-    },
+    div: {
+      maxWidth: "1100px"
+    }
   }
 }
 
-const typography = new Typography(wordpress2013)
+
+const typography = new Typography(bootstrapTheme);
 
 export const { rhythm, scale } = typography
-export default typography
+export default typography;
